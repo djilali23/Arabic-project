@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071a35">
+  <meta name="description" content="مشروع تعليمي تفاعلي حول الأمم المتحدة ودورها في حفظ السلام العالمي">
+  <title>PEACE & UNITY | الأمم المتحدة وصناعة السلام</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="PEACE AND UNITY">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="20" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 32h40M32 12c8 8 8 32 0 40M32 12c-8 8-8 32 0 40M18 19c8 5 20 5 28 0M18 45c8-5 20-5 28 0" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M9 45Q1 31 10 17M55 17q9 14 0 28M8 17l4 1-2 4M56 17l-4 1 2 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </span>
+      <span><b>PEACE <i>&</i> UNITY</b><small data-i18n="brandSub">الأمم المتحدة وصناعة السلام</small></span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="#about" data-i18n="navAbout">عن الأمم المتحدة</a><a href="#organs" data-i18n="navOrgans">أجهزة المنظمة</a><a href="#algeria" data-i18n="navAlgeria">الجزائر والأمم المتحدة</a><a href="#peace" data-i18n="navPeace">حفظ السلام</a><a href="#map" data-i18n="navMap">الخريطة</a><a href="#logos" data-i18n="navLogos">الشعارات</a><a href="#quiz" data-i18n="navQuiz">اختبر معلوماتك</a>
+    </nav>
+    <div class="top-actions">
+      <select id="language" aria-label="Language"><option value="ar">العربية</option><option value="fr">Français</option><option value="en">English</option></select>
+      <button id="themeToggle" class="icon-btn" aria-label="تغيير المظهر" title="تغيير المظهر">☾</button>
+      <button id="menuToggle" class="icon-btn mobile-only" aria-label="فتح القائمة">☰</button>
+    </div>
+  </header>
+  <nav id="mobileNav" class="mobile-nav">
+    <a href="#about" data-i18n="navAbout">عن الأمم المتحدة</a><a href="#organs" data-i18n="navOrgans">أجهزة المنظمة</a><a href="#algeria" data-i18n="navAlgeria">الجزائر والأمم المتحدة</a><a href="#peace" data-i18n="navPeace">حفظ السلام</a><a href="#map" data-i18n="navMap">الخريطة</a><a href="#logos" data-i18n="navLogos">الشعارات</a><a href="#quiz" data-i18n="navQuiz">اختبر معلوماتك</a><a href="#glossary" data-i18n="navGlossary">قاموس المصطلحات</a>
+  </nav>
+  <main>
+    <section id="home" class="hero section-wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span><span data-i18n="heroEyebrow">مشروع تعليمي تفاعلي</span></div>
+        <h1 data-i18n="heroTitle">عالمٌ أكثر سلاماً،<br><em>ومستقبلٌ يجمعنا.</em></h1>
+        <p data-i18n="heroText">اكتشف كيف تعمل الأمم المتحدة مع الدول والشعوب من أجل منع النزاعات، وحماية المدنيين، وبناء فرص أفضل للجميع.</p>
+        <div class="hero-buttons"><a class="btn btn-primary" href="#about" data-i18n="explore">ابدأ الاستكشاف <span>←</span></a><a class="btn btn-ghost" href="#quiz" data-i18n="takeQuiz">اختبر معلوماتك</a></div>
+        <div class="hero-facts"><div><strong>1945</strong><span data-i18n="founded">سنة التأسيس</span></div><div><strong>193</strong><span data-i18n="members">دولة عضواً</span></div><div><strong>24 أكتوبر</strong><span data-i18n="unDay">يوم الأمم المتحدة</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="رسم رمزي للأرض والسلام">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+        <div class="globe"><div class="globe-lines"></div><div class="globe-continent continent-a"></div><div class="globe-continent continent-b"></div><div class="globe-continent continent-c"></div><span class="globe-star">✦</span></div>
+        <div class="floating-card card-top"><span class="mini-icon">✦</span><span data-i18n="cardPeace">السلام والتعاون</span></div>
+        <div class="floating-card card-bottom"><span class="mini-icon gold">◎</span><span data-i18n="cardPeople">شعوب • دول • مستقبل</span></div>
+        <div class="hero-caption">UNITED FOR A BETTER WORLD</div>
+      </div>
+    </section>
+    <section class="ticker"><div><span>✦</span> PEACE <b>•</b> DIALOGUE <b>•</b> COOPERATION <b>•</b> HUMAN DIGNITY <b>•</b> PEACE <b>•</b> DIALOGUE <b>•</b> COOPERATION</div></section>
+
+    <section id="projectCover" class="section-wrap project-cover-section">
+      <div class="project-cover-card">
+        <div class="cover-emblem">✦</div>
+        <span class="kicker" data-i18n="coverKicker">بطاقة المشروع المدرسي</span>
+        <h2>PEACE <i>&</i> UNITY</h2>
+        <p data-i18n="coverSubtitle">دور الأمم المتحدة في حفظ السلام العالمي</p>
+        <div class="cover-fields">
+          <label><span data-i18n="schoolLabel">المؤسسة التعليمية</span><input id="schoolField" placeholder="اكتب اسم الثانوية"></label>
+          <label><span data-i18n="classLabel">القسم</span><input id="classField" placeholder="السنة الأولى ثانوي – آداب"></label>
+          <label><span data-i18n="teacherLabel">إشراف الأستاذ(ة)</span><input id="teacherField" placeholder="اسم الأستاذ(ة)"></label>
+          <label><span data-i18n="teamLabel">إنجاز التلاميذ</span><input id="teamField" placeholder="أسماء أعضاء المجموعة"></label>
+          <label><span data-i18n="yearLabel">السنة الدراسية</span><input id="yearField" value="2026 / 2027"></label>
+        </div>
+        <button id="printCover" class="btn btn-primary" data-i18n="printCover">طباعة بطاقة المشروع</button>
+        <small data-i18n="coverHint">يمكنكم ملء البيانات قبل العرض أو الطباعة. اتركوا أي خانة لا تنطبق فارغة.</small>
+      </div>
+    </section>
+
+    <section id="about" class="section-wrap section">
+      <div class="section-heading"><div><span class="kicker" data-i18n="aboutKicker">01 / التعريف</span><h2 data-i18n="aboutTitle">ما هي الأمم المتحدة؟</h2></div><p data-i18n="aboutLead">منظمة دولية تأسست بعد الحرب العالمية الثانية، لتكون مساحة تتعاون فيها الدول لمواجهة التحديات المشتركة.</p></div>
+      <div class="about-grid">
+        <article class="feature-card about-main"><div class="card-number">01</div><div class="large-symbol">✧</div><h3 data-i18n="aboutCardTitle">منظمة تجمع العالم</h3><p data-i18n="aboutCardText">تأسست الأمم المتحدة في 24 أكتوبر 1945، ويقع مقرها الرئيسي في مدينة نيويورك. وتعمل وفق ميثاق يحدد مبادئها وأهدافها.</p><a href="https://www.un.org/ar/about-us" target="_blank" rel="noopener" class="text-link" data-i18n="learnMore">تعرّف أكثر ↗</a></article>
+        <article class="feature-card"><span class="feature-icon">⌖</span><h3 data-i18n="goalOne">حفظ السلم والأمن الدوليين</h3><p data-i18n="goalOneText">العمل على منع النزاعات وتسويتها بالوسائل السلمية.</p></article>
+        <article class="feature-card"><span class="feature-icon">◇</span><h3 data-i18n="goalTwo">تعزيز حقوق الإنسان</h3><p data-i18n="goalTwoText">الدفاع عن الكرامة والمساواة والحقوق الأساسية لكل إنسان.</p></article>
+        <article class="feature-card"><span class="feature-icon">⌁</span><h3 data-i18n="goalThree">التعاون الدولي</h3><p data-i18n="goalThreeText">تشجيع التعاون في القضايا الاقتصادية والاجتماعية والإنسانية.</p></article>
+        <article class="feature-card"><span class="feature-icon">✺</span><h3 data-i18n="goalFour">تنمية العلاقات الودية</h3><p data-i18n="goalFourText">بناء علاقات قائمة على الاحترام والمساواة بين الدول.</p></article>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="time-item"><b>1945</b><span data-i18n="time1">دخول ميثاق الأمم المتحدة حيّز التنفيذ في 24 أكتوبر.</span></div>
+        <div class="time-item"><b>1956</b><span data-i18n="time2">انطلاق أول قوة طوارئ تابعة للأمم المتحدة.</span></div>
+        <div class="time-item"><b>2000</b><span data-i18n="time3">اعتماد إعلان الألفية وأهدافه التنموية.</span></div>
+        <div class="time-item"><b>2015</b><span data-i18n="time4">اعتماد خطة التنمية المستدامة لعام 2030.</span></div>
+      </div>
+    </section>
+
+    <section id="organs" class="section-wrap section">
+      <div class="section-heading"><div><span class="kicker">02 / UN STRUCTURE</span><h2 data-i18n="organsTitle">الأجهزة الرئيسية الستة</h2></div><p data-i18n="organsLead">تعمل الأمم المتحدة من خلال ستة أجهزة رئيسية أنشأها الميثاق سنة 1945، ولكل جهاز وظيفة محددة.</p></div>
+      <div class="organs-grid">
+        <article class="organ-card"><b>01</b><span>◎</span><h3 data-i18n="organ1">الجمعية العامة</h3><p data-i18n="organ1Text">تجمع جميع الدول الأعضاء لمناقشة القضايا الدولية واتخاذ التوصيات والقرارات وفق الميثاق.</p></article>
+        <article class="organ-card"><b>02</b><span>⌖</span><h3 data-i18n="organ2">مجلس الأمن</h3><p data-i18n="organ2Text">يتحمل المسؤولية الأساسية عن حفظ السلم والأمن الدوليين، ويمكنه اتخاذ قرارات ملزمة وفق الميثاق.</p></article>
+        <article class="organ-card"><b>03</b><span>◇</span><h3 data-i18n="organ3">المجلس الاقتصادي والاجتماعي</h3><p data-i18n="organ3Text">ينسق النقاش والعمل الدولي في القضايا الاقتصادية والاجتماعية والتنموية.</p></article>
+        <article class="organ-card"><b>04</b><span>⌂</span><h3 data-i18n="organ4">مجلس الوصاية</h3><p data-i18n="organ4Text">أُنشئ للإشراف على الأقاليم المشمولة بالوصاية، وعلّق عملياته بعد انتهاء مهمته الأساسية.</p></article>
+        <article class="organ-card"><b>05</b><span>⚖</span><h3 data-i18n="organ5">محكمة العدل الدولية</h3><p data-i18n="organ5Text">الجهاز القضائي الرئيسي للأمم المتحدة، ويفصل في النزاعات القانونية بين الدول ويقدم آراء استشارية.</p></article>
+        <article class="organ-card"><b>06</b><span>✧</span><h3 data-i18n="organ6">الأمانة العامة</h3><p data-i18n="organ6Text">تنجز الأعمال اليومية للمنظمة، ويقودها الأمين العام.</p></article>
+      </div>
+      <p class="source-note"><span data-i18n="organsSource">المصدر:</span> <a href="https://www.un.org/ar/about-us/main-bodies" target="_blank" rel="noopener">الأمم المتحدة – الأجهزة الرئيسية</a></p>
+    </section>
+
+    <section id="algeria" class="dark-section">
+      <div class="section-wrap section">
+        <div class="section-heading light-heading"><div><span class="kicker">03 / ALGERIA & UN</span><h2 data-i18n="algeriaTitle">الجزائر والأمم المتحدة</h2></div><p data-i18n="algeriaLead">بعد استقلالها، أصبحت الجزائر عضواً في الأسرة الدولية وشاركت في أعمال الأمم المتحدة.</p></div>
+        <div class="algeria-panel">
+          <div class="algeria-date"><strong>08</strong><span>OCT</span><b>1962</b></div>
+          <div><span class="kicker" data-i18n="algeriaMilestone">محطة تاريخية</span><h3 data-i18n="algeriaMember">انضمام الجزائر إلى الأمم المتحدة</h3><p data-i18n="algeriaText">انضمت الجمهورية الجزائرية الديمقراطية الشعبية إلى الأمم المتحدة يوم 8 أكتوبر 1962، بعد الاستقلال، وأصبحت جزءاً من المنظمة الدولية.</p><p class="algeria-note" data-i18n="algeriaClarify">تُظهر قائمة الأمم المتحدة أن الجزائر انضمت في 8 أكتوبر 1962. ويُذكر هذا التاريخ بوصفه محطة في حضور الجزائر داخل المنظمة.</p><a class="text-link" href="https://www.un.org/ar/about-us/member-states" target="_blank" rel="noopener" data-i18n="algeriaSource">تحقق من قائمة الدول الأعضاء ↗</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="peace" class="dark-section">
+      <div class="section-wrap section">
+        <div class="section-heading light-heading"><div><span class="kicker">04 / PEACEKEEPING</span><h2 data-i18n="peaceTitle">كيف يُصان السلام؟</h2></div><p data-i18n="peaceLead">حفظ السلام ليس عملاً عسكرياً فقط؛ بل مهمة متعددة الجوانب تقوم على دعم الاستقرار وحماية المدنيين ومساندة الحلول السياسية.</p></div>
+        <div class="peace-grid">
+          <article class="peace-step"><span>01</span><div class="step-icon">◇</div><h3 data-i18n="step1">الحوار والوساطة</h3><p data-i18n="step1Text">تشجيع الأطراف على التفاوض والبحث عن حلول سلمية للنزاعات.</p></article>
+          <article class="peace-step"><span>02</span><div class="step-icon">◎</div><h3 data-i18n="step2">حماية المدنيين</h3><p data-i18n="step2Text">تعمل بعثات حفظ السلام، وفق تفويضها، على حماية المدنيين المعرّضين للخطر.</p></article>
+          <article class="peace-step"><span>03</span><div class="step-icon">⌂</div><h3 data-i18n="step3">دعم المؤسسات</h3><p data-i18n="step3Text">مساندة سيادة القانون، والانتخابات، وبناء مؤسسات قادرة على خدمة المجتمع.</p></article>
+          <article class="peace-step"><span>04</span><div class="step-icon">✧</div><h3 data-i18n="step4">الإغاثة والتعافي</h3><p data-i18n="step4Text">التعاون مع المنظمات الإنسانية لمساعدة المتضررين ودعم التعافي.</p></article>
+        </div>
+        <div class="note-panel"><span class="note-icon">i</span><p data-i18n="peaceNote">معلومة مهمة: ينشئ مجلس الأمن بعثات حفظ السلام ويحدد مهامها. وتعمل هذه البعثات عادةً وفق مبادئ موافقة الأطراف، والحياد، وعدم استخدام القوة إلا دفاعاً عن النفس وعن تنفيذ الولاية، وفق قواعدها.</p></div>
+        <div class="pillars"><div><b>01</b><span data-i18n="pillar1">موافقة الأطراف</span></div><div><b>02</b><span data-i18n="pillar2">الحياد</span></div><div><b>03</b><span data-i18n="pillar3">استخدام القوة ضمن التفويض</span></div></div>
+      </div>
+    </section>
+
+    <section id="map" class="section-wrap section">
+      <div class="section-heading"><div><span class="kicker">05 / WORLD MAP</span><h2 data-i18n="mapTitle">السلام حول العالم</h2></div><p data-i18n="mapLead">خريطة جغرافية حقيقية تتيح لك استكشاف مواقع مراكز الأمم المتحدة الرئيسية حول العالم. اضغط على إحدى العلامات لعرض معلومات عنها.</p></div>
+      <div class="map-layout">
+        <div class="map-board">
+          <div id="realWorldMap" class="real-world-map" role="application" aria-label="خريطة جغرافية تفاعلية للعالم"></div>
+          <div class="map-legend"><span><i></i><span data-i18n="mapLegend">اختر نقطة مضيئة</span></span><small>EDUCATIONAL MAP</small></div>
+        </div>
+        <article id="regionInfo" class="region-info"><span class="kicker" data-i18n="selectedRegion">المنطقة المختارة</span><h3 id="regionTitle">أفريقيا</h3><p id="regionText">تعمل بعثات أممية في عدد من السياقات الأفريقية لدعم تنفيذ اتفاقات السلام وحماية المدنيين ومساندة الاستقرار، وفق التفويض المحدد لكل بعثة.</p><a id="regionLink" class="text-link" href="https://peacekeeping.un.org/ar/where-we-operate" target="_blank" rel="noopener" data-i18n="missionsLink">تعرّف على البعثات ↗</a></article>
+      </div>
+    </section>
+
+    <section id="logos" class="logo-section">
+      <div class="section-wrap section">
+        <div class="section-heading"><div><span class="kicker">06 / DESIGN STUDIO</span><h2 data-i18n="logoTitle">استوديو الشعارات</h2></div><p data-i18n="logoLead">الشعار الجيد يوصل فكرة واضحة بأشكال بسيطة. استكشف نماذجنا، ثم صمّم شعارك واحفظه كصورة.</p></div>
+        <div class="logo-gallery">
+          <article class="logo-card"><div class="sample-logo dove">✧<span>PEACE</span></div><h3 data-i18n="logoOne">السلام والأمل</h3><p data-i18n="logoOneText">النجمة ترمز إلى الأمل، والخطوط الهادئة إلى التعاون.</p></article>
+          <article class="logo-card"><div class="sample-logo globe-logo"><span>◎</span><b>UNITY</b></div><h3 data-i18n="logoTwo">وحدة العالم</h3><p data-i18n="logoTwoText">الدائرة ترمز إلى كوكب واحد يجمع شعوباً متنوعة.</p></article>
+          <article class="logo-card"><div class="sample-logo olive">❧<span>HARMONY</span></div><h3 data-i18n="logoThree">التعايش</h3><p data-i18n="logoThreeText">غصن الزيتون رمز معروف للسلام والمصالحة.</p></article>
+        </div>
+        <div class="studio-panel">
+          <div class="studio-controls"><span class="kicker" data-i18n="studioKicker">صمّم شعارك</span><h3 data-i18n="studioTitle">أنشئ رمز السلام الخاص بك</h3>
+            <label data-i18n="logoNameLabel" for="logoName">اسم الشعار</label><input id="logoName" maxlength="22" value="PEACE & UNITY">
+            <label data-i18n="symbolLabel" for="symbol">الرمز</label><select id="symbol"><option value="✦">نجمة الأمل ✦</option><option value="◎">دائرة الوحدة ◎</option><option value="❧">غصن الزيتون ❧</option><option value="☮">رمز السلام ☮</option><option value="✧">نور ✧</option></select>
+            <label data-i18n="colorLabel" for="logoColor">لون الشعار</label><div class="color-row"><button class="swatch selected" data-color="#2f83c5" style="--swatch:#2f83c5" aria-label="أزرق"></button><button class="swatch" data-color="#c6a35a" style="--swatch:#c6a35a" aria-label="ذهبي"></button><button class="swatch" data-color="#4b9b83" style="--swatch:#4b9b83" aria-label="أخضر"></button><button class="swatch" data-color="#8b75bd" style="--swatch:#8b75bd" aria-label="بنفسجي"></button></div>
+            <button id="downloadLogo" class="btn btn-primary full" data-i18n="downloadLogo">تحميل الشعار PNG</button>
+          </div>
+          <div class="logo-preview-wrap"><div class="logo-preview" id="logoPreview"><div class="preview-ring" id="previewRing"><span id="previewSymbol">✦</span></div><strong id="previewName">PEACE & UNITY</strong><small>TOGETHER FOR PEACE</small></div><span class="preview-caption" data-i18n="previewCaption">معاينة مباشرة لشعارك</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="section-wrap section">
+      <div class="section-heading"><div><span class="kicker">07 / IMPACT & CHALLENGES</span><h2 data-i18n="resultsTitle">إنجازات وتحديات</h2></div><p data-i18n="resultsLead">حققت الأمم المتحدة إسهامات مهمة، لكنها تواجه أيضاً صعوبات تحدّ من قدرتها على معالجة جميع الأزمات.</p></div>
+      <div class="results-grid">
+        <article class="results-card"><span class="results-icon">✦</span><h3 data-i18n="achievementsTitle">من أبرز إسهاماتها</h3><ul><li data-i18n="achievement1">المساهمة في دعم إنهاء الاستعمار واستقلال شعوب كثيرة.</li><li data-i18n="achievement2">إرسال بعثات لحفظ السلام في مناطق النزاع وفق قرارات مجلس الأمن.</li><li data-i18n="achievement3">تنسيق المساعدات الإنسانية عند الكوارث والأزمات.</li><li data-i18n="achievement4">وضع أهداف مشتركة للتنمية وحقوق الإنسان.</li></ul></article>
+        <article class="results-card challenge-card"><span class="results-icon">◇</span><h3 data-i18n="challengesTitle">أهم التحديات</h3><ul><li data-i18n="challenge1">اختلاف مواقف الدول ومصالحها السياسية.</li><li data-i18n="challenge2">استخدام حق النقض في مجلس الأمن قد يعرقل بعض القرارات.</li><li data-i18n="challenge3">نقص التمويل والموارد في بعض العمليات الإنسانية.</li><li data-i18n="challenge4">استمرار النزاعات وصعوبة الوصول إلى حلول دائمة.</li></ul></article>
+      </div>
+      <p class="balanced-note" data-i18n="balancedNote">الخلاصة: الأمم المتحدة أداة للتعاون الدولي وليست حكومة عالمية؛ وتعتمد فعاليتها على تعاون الدول والتزامها بميثاق المنظمة.</p>
+    </section>
+
+    <section id="sdg" class="section-wrap section">
+      <div class="section-heading"><div><span class="kicker">08 / GLOBAL GOALS</span><h2 data-i18n="sdgTitle">السلام والتنمية المستدامة</h2></div><p data-i18n="sdgLead">تربط خطة التنمية المستدامة بين السلام والعدالة والمؤسسات القوية باعتبارها أساساً لمجتمعات آمنة وشاملة.</p></div>
+      <div class="sdg-card"><div class="sdg-number">16</div><div><span class="sdg-label" data-i18n="sdgLabel">الهدف السادس عشر</span><h3 data-i18n="sdgName">السلام والعدل والمؤسسات القوية</h3><p data-i18n="sdgText">التشجيع على إقامة مجتمعات مسالمة لا يُهمّش فيها أحد، وإتاحة الوصول إلى العدالة، وبناء مؤسسات فعّالة وخاضعة للمساءلة.</p><a class="text-link" href="https://sdgs.un.org/goals/goal16" target="_blank" rel="noopener" data-i18n="sdgMore">اقرأ عن الهدف 16 ↗</a></div><div class="sdg-art">⚖<span>✦</span></div></div>
+    </section>
+
+    <section id="quiz" class="quiz-section">
+      <div class="section-wrap section">
+        <div class="section-heading light-heading"><div><span class="kicker">09 / KNOWLEDGE CHECK</span><h2 data-i18n="quizTitle">اختبر معلوماتك</h2></div><p data-i18n="quizLead">خمسة أسئلة قصيرة. اختر الإجابة الصحيحة واكتشف نتيجتك في النهاية.</p></div>
+        <div class="quiz-box" id="quizBox"><div class="quiz-top"><span id="quizProgress">السؤال 1 من 5</span><span id="quizScore">النقاط: 0</span></div><div class="progress-track"><span id="progressBar"></span></div><h3 id="questionText">متى تأسست الأمم المتحدة؟</h3><div id="answers" class="answers"></div><div class="quiz-bottom"><span id="feedback" aria-live="polite"></span><button id="nextQuestion" class="btn btn-primary" disabled data-i18n="nextQuestion">السؤال التالي ←</button></div></div>
+        <div id="quizResult" class="quiz-result hidden"><div class="result-medal">✦</div><span class="kicker" data-i18n="quizFinished">اكتمل الاختبار</span><h3 id="resultTitle">أحسنت!</h3><p id="resultText"></p><strong id="resultScore"></strong><div class="result-actions"><button id="retryQuiz" class="btn btn-primary" data-i18n="retry">إعادة الاختبار</button><button id="makeCertificate" class="btn btn-ghost" data-i18n="getCertificate">احصل على شهادة رمزية</button></div></div>
+      </div>
+    </section>
+
+    <section id="glossary" class="section-wrap section">
+      <div class="section-heading"><div><span class="kicker">10 / GLOSSARY</span><h2 data-i18n="glossaryTitle">قاموس المصطلحات</h2></div><p data-i18n="glossaryLead">مصطلحات أساسية تساعدك على فهم موضوع السلام والعلاقات الدولية.</p></div>
+      <div class="glossary-grid" id="glossaryGrid"></div>
+    </section>
+
+    <section id="gallery" class="section-wrap section">
+      <div class="section-heading"><div><span class="kicker">11 / VISUAL ARCHIVE</span><h2 data-i18n="galleryTitle">معرض رموز السلام</h2></div><p data-i18n="galleryLead">مجموعة من الرسوم الرمزية التي تعبّر عن التعاون والأمل والإنسانية.</p></div>
+      <div class="visual-gallery"><div class="visual visual-one"><span>✧</span><b>HOPE</b></div><div class="visual visual-two"><span>◎</span><b>ONE WORLD</b></div><div class="visual visual-three"><span>❧</span><b>HARMONY</b></div><div class="visual visual-four"><span>☮</span><b>PEACE</b></div></div>
+    </section>
+
+    <section id="sources" class="section-wrap section sources-section">
+      <div class="section-heading"><div><span class="kicker">12 / REFERENCES</span><h2 data-i18n="sourcesTitle">المصادر والمراجع</h2></div><p data-i18n="sourcesLead">اعتمدنا على صفحات ووثائق رسمية للأمم المتحدة للتحقق من المعلومات الواردة في المشروع.</p></div>
+      <div class="sources-list">
+        <a href="https://www.un.org/ar/about-us" target="_blank" rel="noopener"><span>01</span><b data-i18n="source1">التعريف بالأمم المتحدة وأهدافها</b><small>un.org</small>↗</a>
+        <a href="https://www.un.org/ar/about-us/main-bodies" target="_blank" rel="noopener"><span>02</span><b data-i18n="source2">الأجهزة الرئيسية الستة</b><small>un.org</small>↗</a>
+        <a href="https://peacekeeping.un.org/ar" target="_blank" rel="noopener"><span>03</span><b data-i18n="source3">عمليات الأمم المتحدة لحفظ السلام</b><small>peacekeeping.un.org</small>↗</a>
+        <a href="https://www.un.org/ar/about-us/member-states" target="_blank" rel="noopener"><span>04</span><b data-i18n="source4">قائمة الدول الأعضاء وتواريخ انضمامها</b><small>un.org</small>↗</a>
+        <a href="https://sdgs.un.org/goals/goal16" target="_blank" rel="noopener"><span>05</span><b data-i18n="source5">الهدف 16: السلام والعدل والمؤسسات القوية</b><small>sdgs.un.org</small>↗</a>
+      </div>
+    </section>
+
+    <section id="presentation" class="section-wrap section presentation-section">
+      <div class="section-heading"><div><span class="kicker">13 / CLASS PRESENTATION</span><h2 data-i18n="presentationTitle">دليل تقديم المشروع</h2></div><p data-i18n="presentationLead">تقسيم مقترح يساعد المجموعة على تقديم الموضوع بوضوح وثقة.</p></div>
+      <div class="presentation-steps">
+        <article><b>01</b><h3 data-i18n="pres1Title">الافتتاح</h3><p data-i18n="pres1Text">التعريف بعنوان المشروع وطرح سؤال: لماذا يحتاج العالم إلى منظمة تعمل من أجل السلام؟</p></article>
+        <article><b>02</b><h3 data-i18n="pres2Title">التعريف والأجهزة</h3><p data-i18n="pres2Text">شرح تأسيس الأمم المتحدة وأهدافها وأجهزتها الرئيسية الستة.</p></article>
+        <article><b>03</b><h3 data-i18n="pres3Title">حفظ السلام والجزائر</h3><p data-i18n="pres3Text">توضيح وسائل حفظ السلام، ثم ذكر تاريخ انضمام الجزائر ودورها كدولة عضو.</p></article>
+        <article><b>04</b><h3 data-i18n="pres4Title">الخاتمة والتفاعل</h3><p data-i18n="pres4Text">عرض أبرز النتائج والتحديات، ثم دعوة القسم لتجربة الاختبار واستوديو الشعارات.</p></article>
+      </div>
+      <div class="speech-box"><h3 data-i18n="speechTitle">مقدمة مقترحة للإلقاء</h3><p data-i18n="speechText">السلام عليكم. موضوع مشروعنا اليوم هو دور الأمم المتحدة في حفظ السلام. اخترنا هذا الموضوع لأن السلام أساس استقرار الشعوب وتقدمها، وسنتعرف معاً على المنظمة وأجهزتها، والوسائل التي تستعملها للمساهمة في حل النزاعات، مع التوقف عند علاقة الجزائر بها.</p></div>
+    </section>
+
+    <section class="closing-banner"><div class="closing-symbol">✦</div><p data-i18n="closingQuote">«السلام ليس مجرد غياب الحرب، بل هو بناء عالم يقوم على العدل والاحترام والتعاون.»</p><span>PEACE & UNITY</span></section>
+  </main>
+  <footer class="footer">
+    <div class="footer-brand"><b>PEACE <i>&</i> UNITY</b><span data-i18n="footerText">مشروع مدرسي تعليمي حول الأمم المتحدة ودورها في حفظ السلام.</span></div>
+    <div class="footer-links"><a href="#sources" data-i18n="navSources">المصادر</a><a href="#presentation" data-i18n="navPresentation">دليل العرض</a><a href="https://www.un.org/ar/" target="_blank" rel="noopener">UN.org</a><a href="https://peacekeeping.un.org/ar" target="_blank" rel="noopener" data-i18n="footerPeace">عمليات حفظ السلام</a><a href="https://sdgs.un.org/goals" target="_blank" rel="noopener" data-i18n="footerGoals">أهداف التنمية المستدامة</a></div>
+    <small>© 2026 PEACE & UNITY · <span data-i18n="footerNote">أُعدّ لأغراض تعليمية</span></small>
+  </footer>
+
+  <dialog id="certificateDialog" class="certificate-dialog">
+    <div class="certificate" id="certificate">
+      <div class="certificate-border"><span class="cert-mark">✦</span><small>PEACE & UNITY</small><h2 data-i18n="certTitle">شهادة مشاركة رمزية</h2><p data-i18n="certIntro">تُمنح هذه الشهادة إلى</p><input id="studentName" maxlength="35" placeholder="اكتب اسمك هنا" data-i18n-placeholder="studentPlaceholder"><p data-i18n="certBody">لمشاركته في اختبار المعرفة حول الأمم المتحدة والسلام العالمي.</p><strong id="certScore">النتيجة: 0/5</strong><div class="cert-footer"><span data-i18n="certDate">10 نوفمبر 2026</span><span>PEACE & UNITY</span></div></div>
+    </div>
+    <div class="dialog-actions"><button id="printCertificate" class="btn btn-primary" data-i18n="printCert">طباعة / حفظ PDF</button><button id="closeCertificate" class="btn btn-ghost" data-i18n="close">إغلاق</button></div>
+  </dialog>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>
