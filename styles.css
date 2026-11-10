@@ -26,3 +26,13 @@ body.light-mode .project-cover-card{background:linear-gradient(135deg,#fff,#f1f5
 .cover-fields input{width:100%;box-sizing:border-box;}
 .speech-box{line-height:2.1;}
 @media(max-width:620px){.real-world-map{height:340px}.map-board{padding:8px}.sample-logo span,.sample-logo b{font-size:clamp(15px,5vw,23px)!important;letter-spacing:0}.logo-card{grid-template-columns:minmax(90px,110px) minmax(0,1fr);}.project-cover-card h2{font-size:clamp(23px,7vw,34px);letter-spacing:1px;overflow-wrap:anywhere}.project-cover-card>small{line-height:1.8}}
+
+/* Permanent team credits at the end of the page */
+.team-credits{grid-column:1/-1;margin-top:12px;padding:25px 22px 22px;border-top:1px solid #ffffff24;border-bottom:1px solid #ffffff24;text-align:center;background:linear-gradient(135deg,#102a46aa,#173b5a66);border-radius:14px}
+.team-credits-kicker{display:block;color:#c6a35a;font-size:10px;font-weight:800;letter-spacing:2px;margin-bottom:7px}
+.team-credits h3{margin:0 0 14px;color:#f2f6fa;font-size:17px;letter-spacing:.5px}
+.team-credits ul{list-style:none;padding:0;margin:0 auto;display:flex;justify-content:center;gap:9px 22px;flex-wrap:wrap}
+.team-credits li{color:#d5e1eb;font-size:12px;font-weight:700;white-space:nowrap}
+.team-credits p{margin:15px 0 0;color:#8fa6ba;font-size:10px;line-height:1.9}
+@media(max-width:620px){.team-credits{padding:22px 14px}.team-credits ul{display:grid;grid-template-columns:1fr 1fr;gap:12px}.team-credits li{white-space:normal;font-size:11px}.team-credits p{font-size:9px}}
+@media print{.team-credits{break-inside:avoid}}
